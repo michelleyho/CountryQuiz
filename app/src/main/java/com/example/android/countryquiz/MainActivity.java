@@ -89,11 +89,10 @@ public class MainActivity extends AppCompatActivity {
         //Answer 4:
         EditText currency = (EditText) findViewById(R.id.currency_input);
 
-        int score_1 = checkMultipleChoice(getString(R.string.flag_country_2), country_1, country_2, country_3, country_4);
-        int score_2 = checkMultipleChoice(getString(R.string.capital4), capital_1, capital_2, capital_3, capital_4);
+        int score_1 = checkMultipleChoice(getString(R.string.correct1), country_1, country_2, country_3, country_4);
+        int score_2 = checkMultipleChoice(getString(R.string.correct2), capital_1, capital_2, capital_3, capital_4);
         int score_3 = checkBoxes(city_1, city_2, city_3, city_4);
-        String correctAnswer = "Euro";
-        int score_4 = checkFreeAnswer(correctAnswer, currency.getText().toString());
+        int score_4 = checkFreeAnswer(getString(R.string.correct4), currency.getText().toString());
         Log.d("MainActivity", "score_1 is:" + score_1);
         Log.d("MainActivity", "score_2 is:" + score_2);
         Log.d("MainActivity", "score_3 is:" + score_3);
@@ -137,8 +136,8 @@ public class MainActivity extends AppCompatActivity {
 
     private int checkBoxes(CheckBox answer1, CheckBox answer2, CheckBox answer3, CheckBox answer4){
         int score = 0;
-        String correctAnswer1 = getString(R.string.city1);
-        String correctAnswer2 = getString(R.string.city3);
+        String correctAnswer1 = getString(R.string.correct3a);
+        String correctAnswer2 = getString(R.string.correct3b);
 
         if (answer1.isChecked()){
             String answerText = answer1.getText().toString();

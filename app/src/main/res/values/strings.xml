@@ -19,4 +19,11 @@
     <string name="city2">Bordeaux</string>
     <string name="city3">Porto</string>
     <string name="city4">Leicester</string>
+
+    <!-- Correct Answers -->
+    <string name="correct1">Portugal</string>
+    <string name="correct2">Lisbon</string>
+    <string name="correct3a">Lisbon</string>
+    <string name="correct3b">Porto</string>
+    <string name="correct4">Euro</string>
 </resources>
