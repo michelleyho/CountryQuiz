@@ -119,16 +119,16 @@ public class MainActivity extends AppCompatActivity {
         int score = 0;
 
         if (answer1.isChecked()){
-            score = (answer1.getText().toString() == correctAnswer) ? 1 : 0 ;
+            score = (answer1.getText().toString().equals(correctAnswer)) ? 1 : 0 ;
         }
         else if (answer2.isChecked()){
-            score = (answer2.getText().toString() == correctAnswer) ? 1 : 0 ;
+            score = (answer2.getText().toString().equals(correctAnswer)) ? 1 : 0 ;
         }
         else if (answer3.isChecked()){
-            score = (answer3.getText().toString() == correctAnswer) ? 1 : 0 ;
+            score = (answer3.getText().toString().equals(correctAnswer)) ? 1 : 0 ;
         }
         else if (answer4.isChecked()){
-            score = (answer4.getText().toString() == correctAnswer) ? 1 : 0 ;
+            score = (answer4.getText().toString().equals(correctAnswer)) ? 1 : 0 ;
         }
 
 
@@ -142,25 +142,25 @@ public class MainActivity extends AppCompatActivity {
 
         if (answer1.isChecked()){
             String answerText = answer1.getText().toString();
-            if ((answerText == correctAnswer1) || (answerText == correctAnswer2)){
+            if ((answerText.equals(correctAnswer1)) || (answerText.equals(correctAnswer2))){
                 score += 1;
             }
         }
         if (answer2.isChecked()){
             String answerText = answer2.getText().toString();
-            if ((answerText == correctAnswer1) || (answerText == correctAnswer2)){
+            if ((answerText.equals(correctAnswer1)) || (answerText.equals(correctAnswer2))){
                 score += 1;
             }
         }
         if (answer3.isChecked()){
             String answerText = answer3.getText().toString();
-            if ((answerText == correctAnswer1) || (answerText == correctAnswer2)){
+            if ((answerText.equals(correctAnswer1)) || (answerText.equals(correctAnswer2))){
                 score += 1;
             }
         }
         if (answer4.isChecked()){
             String answerText = answer4.getText().toString();
-            if ((answerText == correctAnswer1) || (answerText == correctAnswer2)){
+            if ((answerText.equals(correctAnswer1)) || (answerText.equals(correctAnswer2))){
                 score += 1;
             }
         }
