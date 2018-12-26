@@ -48,7 +48,6 @@
 
 
         <!-- Question 2 -->
-
             <TextView
                 android:id="@+id/question_2"
                 style="@style/QuestionHeaderStyle"/>
@@ -143,16 +142,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="30dp"
+                android:background="@color/colorAccent"
                 android:onClick="submitAnswers"
                 android:text="@string/submit"
-                android:textColor="@color/text_icons"
-                android:background="@color/colorAccent" />
+                android:textColor="@color/text_icons" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
                 android:onClick="resetResponses"
-                android:text="@string/reset" />
+                android:text="@string/reset"
+                android:textColor="@color/text_icons"/>
 
         </LinearLayout>
 

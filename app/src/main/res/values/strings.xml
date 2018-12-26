@@ -4,10 +4,13 @@
     <string name="submit">Submit</string>
     <string name="reset">Reset</string>
 
+    <!-- Question Prompt -->
     <string name="question1">"Which country does the below flag represent?"</string>
     <string name="question2">"What is the capital for the country from Question 1?"</string>
     <string name="question3">"Which of the following cities belong to the country to Question 1?"</string>
     <string name="question4">"What is the money currency of the country in Question 1?"</string>
+
+    <!-- Answer Choices -->
     <string name="flag_country_1">Greece</string>
     <string name="flag_country_2">Portugal</string>
     <string name="flag_country_3">Finland</string>

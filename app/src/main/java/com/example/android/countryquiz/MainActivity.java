@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Question Header
         TextView question1_header = (TextView) findViewById(R.id.question_1);
         question1_header.setText("Question 1");
 
@@ -34,7 +35,11 @@ public class MainActivity extends AppCompatActivity {
         TextView question4_header = (TextView) findViewById(R.id.question_4);
         question4_header.setText("Question 4");
 
+        //Question 1 Flag
+        ImageView country_flag = findViewById(R.id.country_flag);
+        country_flag.setImageResource(R.drawable.portuguese_flag_small);
 
+        //Question 1 Choices
         RadioButton flag_country_1 = (RadioButton) findViewById(R.id.flag_country_1);
         flag_country_1.setText(getString(R.string.flag_country_1));
         RadioButton flag_country_2 = (RadioButton) findViewById(R.id.flag_country_2);
@@ -44,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         RadioButton flag_country_4 = (RadioButton) findViewById(R.id.flag_country_4);
         flag_country_4.setText(getString(R.string.flag_country_4));
 
+        //Question 2 Choices
         RadioButton capital_1 = (RadioButton) findViewById(R.id.capital_1);
         capital_1.setText(getString(R.string.capital1));
         RadioButton capital_2 = (RadioButton) findViewById(R.id.capital_2);
@@ -53,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         RadioButton capital_4 = (RadioButton) findViewById(R.id.capital_4);
         capital_4.setText(getString(R.string.capital4));
 
-
+        //Question 3 Choices
         CheckBox city_1 = (CheckBox) findViewById(R.id.city_1);
         city_1.setText(getString(R.string.city1));
         CheckBox city_2 = (CheckBox) findViewById(R.id.city_2);
@@ -63,11 +69,7 @@ public class MainActivity extends AppCompatActivity {
         CheckBox city_4 = (CheckBox) findViewById(R.id.city_4);
         city_4.setText(getString(R.string.city4));
 
-
-        ImageView country_flag = findViewById(R.id.country_flag);
-        country_flag.setImageResource(R.drawable.portuguese_flag_small);
     }
-
 
     public void resetResponses(View view){
         RadioGroup flag_countries = (RadioGroup) findViewById(R.id.flag_countries);
@@ -137,7 +139,6 @@ public class MainActivity extends AppCompatActivity {
         else if (answer4.isChecked()){
             score = (answer4.getText().toString().equals(correctAnswer)) ? 1 : 0 ;
         }
-
 
         return score;
     }
