@@ -9,6 +9,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -67,6 +68,28 @@ public class MainActivity extends AppCompatActivity {
         country_flag.setImageResource(R.drawable.portuguese_flag_small);
     }
 
+
+    public void resetResponses(View view){
+        RadioGroup flag_countries = (RadioGroup) findViewById(R.id.flag_countries);
+        flag_countries.clearCheck();
+
+        RadioGroup capitals = (RadioGroup) findViewById(R.id.capitals);
+        capitals.clearCheck();
+
+        CheckBox city_1 = (CheckBox) findViewById(R.id.city_1);
+        city_1.setChecked(false);
+        CheckBox city_2 = (CheckBox) findViewById(R.id.city_2);
+        city_2.setChecked(false);
+        CheckBox city_3 = (CheckBox) findViewById(R.id.city_3);
+        city_3.setChecked(false);
+        CheckBox city_4 = (CheckBox) findViewById(R.id.city_4);
+        city_4.setChecked(false);
+
+        EditText currency = (EditText) findViewById(R.id.currency_input);
+        currency.setText(null);
+
+    }
+
     public void submitAnswers(View view){
         //Answer 1:
         RadioButton country_1 = (RadioButton) findViewById(R.id.flag_country_1);
@@ -93,24 +116,9 @@ public class MainActivity extends AppCompatActivity {
         int score_2 = checkMultipleChoice(getString(R.string.correct2), capital_1, capital_2, capital_3, capital_4);
         int score_3 = checkBoxes(city_1, city_2, city_3, city_4);
         int score_4 = checkFreeAnswer(getString(R.string.correct4), currency.getText().toString());
-        Log.d("MainActivity", "score_1 is:" + score_1);
-        Log.d("MainActivity", "score_2 is:" + score_2);
-        Log.d("MainActivity", "score_3 is:" + score_3);
-        Log.d("MainActivity", "score_4 is:" + score_4);
         totalScore = score_1 + score_2 + score_3 + score_4;
 
-        Log.d("MainActivity", "TotalScore is:" + totalScore);
-
-       /* EditText addName = (EditText) findViewById(R.id.name_input);
-        CheckBox addWhipped = (CheckBox) findViewById(R.id.whipped_cream_select);
-        CheckBox addChocolate = (CheckBox) findViewById(R.id.chocolate_select);
-        //display(quantity);
-        String quantityMessage = "Total Item Count " + quantity + " coffees.";
-        String priceMessage = "Amount Due: " + "$" +  quantity*5;
-        //displayMessage(quantityMessage);
-        //displayMessage(priceMessage);
-        orderSummary(addName.getText().toString(), quantity ,5, addWhipped.isChecked(), addChocolate.isChecked());*/
-
+        //Log.d("MainActivity", "TotalScore is:" + totalScore);
         displayScore();
     }
 
@@ -200,4 +208,5 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(scoreMessage);
 
     }
+
 }

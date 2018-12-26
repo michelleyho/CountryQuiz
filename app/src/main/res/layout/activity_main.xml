@@ -31,7 +31,8 @@
 
         <RadioGroup
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/flag_countries">
 
             <RadioButton
                 android:layout_width="wrap_content"
@@ -64,7 +65,9 @@
 
             <RadioGroup
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:id="@+id/capitals">
+
 
                 <RadioButton
                     android:layout_width="wrap_content"
@@ -138,11 +141,24 @@
                 android:inputType="textCapWords"/>
 
         <!-- Final Submission -->
-        <Button
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="submitAnswers"
-            android:text="@string/submit" />
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="submitAnswers"
+                android:text="@string/submit" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="resetResponses"
+                android:text="@string/reset" />
+
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
