@@ -8,12 +8,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Country Quiz!"/>
-
         <!-- Question 1 -->
         <TextView
             android:id="@+id/question_1"
@@ -30,26 +24,26 @@
             android:layout_gravity="center_horizontal"/>
 
         <RadioGroup
+            android:id="@+id/flag_countries"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/flag_countries">
+            android:layout_height="wrap_content">
 
             <RadioButton
+                android:id="@+id/flag_country_1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/flag_country_1"/>
+                android:layout_height="wrap_content"/>
             <RadioButton
+                android:id="@+id/flag_country_2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/flag_country_2"/>
+                android:layout_height="wrap_content"/>
             <RadioButton
+                android:id="@+id/flag_country_3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/flag_country_3"/>
+                android:layout_height="wrap_content"/>
             <RadioButton
+                android:id="@+id/flag_country_4"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/flag_country_4"/>
+                android:layout_height="wrap_content"/>
         </RadioGroup>
 
 
@@ -64,27 +58,27 @@
                 android:text="@string/question2"/>
 
             <RadioGroup
+                android:id="@+id/capitals"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/capitals">
+                android:layout_height="wrap_content">
 
 
                 <RadioButton
+                    android:id="@+id/capital_1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/capital_1"/>
+                    android:layout_height="wrap_content"/>
                 <RadioButton
+                    android:id="@+id/capital_2"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/capital_2"/>
+                    android:layout_height="wrap_content"/>
                 <RadioButton
+                    android:id="@+id/capital_3"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/capital_3"/>
+                    android:layout_height="wrap_content"/>
                 <RadioButton
+                    android:id="@+id/capital_4"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/capital_4"/>
+                    android:layout_height="wrap_content"/>
             </RadioGroup>
         <!-- Question 3 -->
 
@@ -101,25 +95,25 @@
             android:layout_height="wrap_content">
 
             <CheckBox
+                android:id="@+id/city_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/city_1"
                 />
 
             <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/city_2"
-                />
-            <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                />
+            <CheckBox
                 android:id="@+id/city_3"
-                />
-            <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                />
+            <CheckBox
                 android:id="@+id/city_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 />
         </LinearLayout>
 
@@ -148,8 +142,11 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
                 android:onClick="submitAnswers"
-                android:text="@string/submit" />
+                android:text="@string/submit"
+                android:textColor="@color/text_icons"
+                android:background="@color/colorAccent" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -157,13 +154,7 @@
                 android:onClick="resetResponses"
                 android:text="@string/reset" />
 
-
         </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/final_score"/>
 
     </LinearLayout>
 

@@ -176,26 +176,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private int checkFreeAnswer(String correctAnswer, String answer){
-        Log.d("MainActivity", "Correct answer is:" + correctAnswer);
-        Log.d("MainActivity", "Written answer is:" + answer);
-        int score = 0;
-        if (correctAnswer.equals(answer)){
-            Log.d("MainActivity", "Inside loop:" + answer);
-            score = 1;
-        }
-        String scoreMessage = "Free Answer score is : " + score;
-        String answerMessage = "Written answer is: " + answer;
-
-        Toast toast = Toast.makeText(getApplicationContext(), scoreMessage,
-                Toast.LENGTH_SHORT);
-        toast.show();
-
-        toast = Toast.makeText(getApplicationContext(), answerMessage,
-                Toast.LENGTH_SHORT);
-        toast.show();
-
-        return score;
-
+        return (correctAnswer.equals(answer)) ? 1 : 0;
     }
 
     private void displayScore() {
@@ -203,10 +184,5 @@ public class MainActivity extends AppCompatActivity {
         Toast toast = Toast.makeText(getApplicationContext(), scoreMessage,
                 Toast.LENGTH_SHORT);
         toast.show();
-
-        TextView scoreView = (TextView) findViewById(R.id.final_score);
-        scoreView.setText(scoreMessage);
-
     }
-
 }
